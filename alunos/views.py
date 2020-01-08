@@ -32,4 +32,18 @@ def detalhes_aluno(request, id):
 
 
 
-      
+def atualizar_aluno(request, id):
+    aluno= Aluno.objects.get(pk=id)
+    form = AlunoForm(request.POST or None, instance= aluno)
+
+    args= { 'form':form}
+
+    if form.is_valid():
+        form.save()
+        args = {
+    
+            'msg':'O cadastro foi atualizado com sucesso :)'
+        }
+    return render(request, 'atualizaraluno.html',args)
+
+
