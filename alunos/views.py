@@ -24,6 +24,12 @@ def lista_alunos(request):
      args = {'lista_alunos':lista_alunos}
      return render(request, 'listadealunos.html',args)
 
+def detalhes_aluno(request, id):
+    aluno= Aluno.objects.get(pk=id)
+    
+    args={'aluno':aluno}
+    return render(request, 'detalhes.html',args)
+
 
 
       
