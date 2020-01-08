@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block body%}
+
+{% for aluno in lista_alunos %}
+<h4>{{aluno.nome}}</h4>
+<p>{{aluno.idade}}anos</p>
+<p>Endereco: {{aluno.endereco}}</p>
+
+{% endfor %}
+{% endblock body %}

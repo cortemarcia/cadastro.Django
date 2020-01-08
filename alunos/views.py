@@ -19,8 +19,10 @@ def cadastrar_aluno(request):
     args= {'form':form}  
     return render(request, 'cadastro.html', args)
 
-def lista(request):
+def lista_alunos(request):
      lista_alunos = Aluno.objects.filter().all()
+     args = {'lista_alunos':lista_alunos}
+     return render(request, 'listadealunos.html',args)
 
 
 
