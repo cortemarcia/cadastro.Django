@@ -5,6 +5,15 @@
     {% if msg%}
         <h3>{{msg}}</h3>
         <a href="/">Voltar </a>
+    {% endif %} 
+
+    {% if form%}  
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button>Atualizar Cadastro</button>
+        </form> 
+    {% endif %}     
 
 
 {% endblock body %}

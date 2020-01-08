@@ -19,6 +19,7 @@ from alunos.views import *
 
 
 urlpatterns = [
+    path('atualizar/aluno/<int:id>', atualizar_aluno),
     path ('aluno/<int:id>', detalhes_aluno),
     path ('lista/alunos/', lista_alunos),
     path ('cadastrar/alunos/', cadastrar_aluno),
