@@ -2,11 +2,13 @@
 
 {% block body%}
 
-<h3>{{aluno.nome}}</h3>
-<p>{{aluno.idade}}anos </p>
-<p>Endereço:{{aluno.endereco}}</p>
-<p>Genero:{{aluno.genero}}</p>
+    <h3>{{aluno.nome}}</h3>
+    <p>{{aluno.idade}}anos </p>
+    <p>Endereço:{{aluno.endereco}}</p>
+    <p>Genero:{{aluno.genero}}</p>
 
-<a href="/atualizar/aluno/{{aluno.pk}}"><button>Atualizar Cadastro</button></a>
+    <a href="/atualizar/aluno/{{aluno.pk}}"><button>Atualizar Cadastro</button></a>
+    <a href="/deletar/aluno/{{aluno.pk}}"><button>Deletar Aluno</button></a>
+    <h2>{{msg}}</h2>
 
 {% endblock body %}

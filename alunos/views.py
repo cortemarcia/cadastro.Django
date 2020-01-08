@@ -46,4 +46,14 @@ def atualizar_aluno(request, id):
         }
     return render(request, 'atualizaraluno.html',args)
 
+def deletar_aluno(request, id):
+    aluno= Aluno.objects.get(pk=id)
+    aluno.delete()
+    args = {  
+            'msg':'O cadastro foi deletado com sucesso :)',
+            'aluno': aluno
+        }
+    return render(request,'detalhes.html',args)  
+
+
 
